@@ -1,0 +1,74 @@
+/* Wrapper and perspective */
+.laptop-wrapper {
+  perspective: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0d1117;
+}
+
+/* Full laptop */
+.laptop {
+  width: 320px;
+  transform-style: preserve-3d;
+  animation: openLaptop 1.4s ease-out forwards;
+  transform-origin: bottom center;
+  opacity: 0;
+}
+
+/* Screen (opening part) */
+.laptop-screen {
+  height: 180px;
+  background: linear-gradient(to bottom, #1f1f1f, #2d2d2d);
+  color: #ffffff;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+  transform-origin: bottom;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hinge line between screen and keyboard */
+.laptop-hinge {
+  height: 6px;
+  background: #555;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+}
+
+/* Base */
+.laptop-base {
+  height: 40px;
+  background: #2f2f2f;
+  border-radius: 0 0 10px 10px;
+  box-shadow: inset 0 1px 4px rgba(255, 255, 255, 0.1);
+}
+
+/* Screen content */
+.screen-content {
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.1rem;
+  opacity: 0;
+  animation: fadeIn 1s ease 1s forwards;
+}
+
+/* Animations */
+@keyframes openLaptop {
+  0% {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

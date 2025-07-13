@@ -1,0 +1,129 @@
+.profile-card-outer {
+  position: relative;
+  width: 360px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: linear-gradient(to bottom right, #f8fafc, #e2e8f0);
+  border-radius: 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+/* Card Content */
+.profile-card-3d {
+  position: relative;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  border-radius: 1.5rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.5s;
+  z-index: 2;
+}
+
+.profile-card-outer:hover .profile-card-3d {
+  transform: rotateY(6deg) rotateX(4deg);
+}
+
+.photo-wrapper {
+  width: 150px;
+  height: 170px;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.cutout-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-top: 0.5rem;
+}
+
+.title {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.bio {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin: 1rem 0;
+}
+
+.social-links a {
+  font-size: 1.3rem;
+  margin: 0 0.6rem;
+  color: #3b82f6;
+  transition: color 0.3s;
+}
+.social-links a:hover {
+  color: #1d4ed8;
+}
+
+.resume-button {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.5rem 1.2rem;
+  background: #3b82f6;
+  color: white;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.resume-button:hover {
+  background: #2563eb;
+}
+
+/* FLOATING DEV ICONS */
+.float-icon {
+  position: absolute;
+  font-size: 40px;
+  color: #1e293b;
+  opacity: 0.05;
+  z-index: 0;
+  animation: float 6s ease-in-out infinite alternate;
+}
+
+.icon1 {
+  top: 10px;
+  left: 10px;
+  animation-delay: 0s;
+}
+.icon2 {
+  top: 50%;
+  left: -20px;
+  animation-delay: 1s;
+}
+.icon3 {
+  bottom: 10px;
+  right: -15px;
+  animation-delay: 2s;
+}
+.icon4 {
+  top: 30%;
+  right: -20px;
+  animation-delay: 3s;
+}
+.icon5 {
+  bottom: -10px;
+  left: 60%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0px) rotate(0deg);
+  }
+  to {
+    transform: translateY(-15px) rotate(8deg);
+  }
+}
