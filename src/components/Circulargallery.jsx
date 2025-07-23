@@ -1,7 +1,21 @@
 import { Camera, Mesh, Plane, Program, Renderer, Texture, Transform } from "ogl";
 import { useEffect, useRef } from "react";
-
-import "./CircularGallery.css";
+import reactimg from "../assets/react.png"
+import mongodb from "../assets/mongodb.png"
+import jsimg from "../assets/js.png"
+import expressimg from "../assets/express.png"
+import nodejsimg from "../assets/nodejs.png"
+import htmlimg from "../assets/html.jpg"
+import bootstrapcss from "../assets/bootstrap.png"
+import cssimg from "../assets/css.png"
+import tailwindcss from "../assets/tailwindcss.jpg"
+import pythonimg from "../assets/pythonimg.jpg"
+import gitimg from "../assets/git.png"
+import reduximg from "../assets/redux.png"
+import flaskimg from "../assets/flask.jpg"
+import postmanimg from "../assets/postman.png"
+import typescriptimg from "../assets/typescript.jpg"
+import "./circular-gallery.css";
 
 function debounce(func, wait) {
   let timeout;
@@ -268,8 +282,8 @@ class Media {
       }
     }
     this.scale = this.screen.height / 1500;
-    this.plane.scale.y = (this.viewport.height * (900 * this.scale)) / this.screen.height;
-    this.plane.scale.x = (this.viewport.width * (700 * this.scale)) / this.screen.width;
+    this.plane.scale.y = (this.viewport.height * (500 * this.scale)) / this.screen.height;
+    this.plane.scale.x = (this.viewport.width * (400 * this.scale)) / this.screen.width;
     this.plane.program.uniforms.uPlaneSizes.value = [this.plane.scale.x, this.plane.scale.y];
     this.padding = 2;
     this.width = this.plane.scale.x + this.padding;
@@ -327,18 +341,21 @@ class App {
   }
   createMedias(items, bend = 1, textColor, borderRadius, font) {
     const defaultItems = [
-      { image: `https://picsum.photos/seed/1/800/600?grayscale`, text: "Bridge" },
-      { image: `https://picsum.photos/seed/2/800/600?grayscale`, text: "Desk Setup" },
-      { image: `https://picsum.photos/seed/3/800/600?grayscale`, text: "Waterfall" },
-      { image: `https://picsum.photos/seed/4/800/600?grayscale`, text: "Strawberries" },
-      { image: `https://picsum.photos/seed/5/800/600?grayscale`, text: "Deep Diving" },
-      { image: `https://picsum.photos/seed/16/800/600?grayscale`, text: "Train Track" },
-      { image: `https://picsum.photos/seed/17/800/600?grayscale`, text: "Santorini" },
-      { image: `https://picsum.photos/seed/8/800/600?grayscale`, text: "Blurry Lights" },
-      { image: `https://picsum.photos/seed/9/800/600?grayscale`, text: "New York" },
-      { image: `https://picsum.photos/seed/10/800/600?grayscale`, text: "Good Boy" },
-      { image: `https://picsum.photos/seed/21/800/600?grayscale`, text: "Coastline" },
-      { image: `https://picsum.photos/seed/12/800/600?grayscale`, text: "Palm Trees" },
+      { image: reactimg, text: "React" },
+      { image: jsimg, text: "javaSrcipt" },
+      { image: mongodb, text: "Mongo DB" },
+      { image: expressimg, text: "Express js" },
+      { image: nodejsimg, text: "Node js" },
+      { image: htmlimg, text: "Html" },
+      { image: bootstrapcss, text: "Bootstrap" },
+      { image: cssimg, text: "CSS3" },
+      { image: tailwindcss, text: "Tailwind css" },
+      { image: pythonimg, text: "Python" },
+      { image: gitimg, text: "Git & GitHub" },
+      { image: reduximg, text: "Redux" },
+      { image: flaskimg, text: "Flask" },
+      { image: postmanimg, text: "Postman" },
+      { image: typescriptimg, text: "typeScript" },
     ];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);

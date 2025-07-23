@@ -13,6 +13,8 @@ export default {
       blob4: "blobMove4 24s ease-in-out infinite",
       blob5: "blobMove5 26s ease-in-out infinite",
       blob6: "blobMove6 28s ease-in-out infinite",
+      float: 'float 2.5s ease-in-out infinite',
+      fadeInText: 'fadeInText 1.2s ease forwards',
     },
     keyframes: {
       blobMove1: {
@@ -39,9 +41,19 @@ export default {
         '0%, 100%': { transform: 'translate(0, 0)' },
         '50%': { transform: 'translate(-10px, -40px)' }
       },
+       float: {
+      '0%, 100%': { transform: 'translateY(0)' },
+      '50%': { transform: 'translateY(-8px)' },
     },
+    fadeInText: {
+      '0%': { opacity: 0, transform: 'translateY(30px)' },
+      '100%': { opacity: 1, transform: 'translateY(0)' },
+    },
+    },
+  
   },
 },
+
 
   darkMode: 'class',
   plugins: [],

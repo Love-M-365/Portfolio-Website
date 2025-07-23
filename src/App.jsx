@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, {useEffect, useRef } from 'react'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import TextPressure from './components/Hello'
 import Photo from './components/Photo'
@@ -10,6 +10,10 @@ import ProfileCard from './components/ProfileCard'
 import TiltedCard from './components/ProfileCard';
 import  Card  from './components/Card'
 import Home from './components/mainpage'
+import { motion } from "framer-motion";
+import CircularGallery from './components/Circulargallery'
+import { ArrowDown } from "lucide-react";
+
 
 // Little helpers ...
 const url = (name, wrap = false) =>
@@ -17,6 +21,15 @@ const url = (name, wrap = false) =>
 
 export default function App() {
   const parallax = useRef(null)
+    useEffect(() => {
+      const handleScroll = () => {
+        setScrolled(window.scrollY > 50);
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+  
 
   return (
     <div>
@@ -34,7 +47,7 @@ export default function App() {
 }}>
 
 </div>
-        <div  style={{position: 'relative',marginBottom:"10rem",}}>
+        <div  style={{position: 'relative'}}>
  <Home></Home>
  
 </div>
@@ -57,17 +70,47 @@ export default function App() {
             backgroundSize: 'cover',
           }}
         />
+        
+ <section className='w-[90rem] h-[50rem]   '>
+   <motion.div
+  initial={{ opacity: 0, y: 50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+  className="w-full mt-[10rem] text-center relative overflow-hidden px-4"
+>
+ 
+  {/* Foreground animated heading in a glass box */}
+  <div className="relative z-10 inline-block px-8 py-6 bg-white/10 backdrop-blur-md border border-white/30 rounded-2xl shadow-lg">
+    <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-wide">
+      SKILLS
+    </h3>
+  </div>
+</motion.div>
+<div className="mt-8 flex items-center justify-center">
+  <motion.div
+    animate={{ y: [0, 10, 0] }}
+    transition={{
+      repeat: Infinity,
+      duration: 1.5,
+      ease: "easeInOut",
+    }}
+    className="text-white/80"
+  >
+   
+  </motion.div>
+</div>
+
+   <CircularGallery bend={2} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02}/>
+   
+ </section>
+ 
+    
+
+  
          
         <ParallaxLayer offset={1.3} speed={-0.3} style={{ pointerEvents: 'none' }}>
           <img src={loveee} style={{ width: '15%', marginLeft: '70%' }} />
-        </ParallaxLayer>
-       
-      
-
- 
-    <Card></Card>
-
-  
+          </ParallaxLayer>
       </Parallax>
     </div>
     </div>
