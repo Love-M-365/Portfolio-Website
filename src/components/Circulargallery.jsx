@@ -13,7 +13,7 @@ import pythonimg from "../assets/pythonimg.jpg"
 import gitimg from "../assets/git.png"
 import reduximg from "../assets/redux.png"
 import flaskimg from "../assets/flask.jpg"
-import postmanimg from "../assets/postman.png"
+import postmanimg from "../assets/postman.jpeg"
 import typescriptimg from "../assets/typescript.jpg"
 import "./circular-gallery.css";
 
