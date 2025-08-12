@@ -54,7 +54,7 @@ export default function App() {
   >
     <div className="inline-block px-8 py-6  backdrop-blur-md border border-white/30 rounded-2xl shadow-lg">
       <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-wide">
-        SKILLS
+        Love SKILLS 
       </h3>
     </div>
   </motion.div>
