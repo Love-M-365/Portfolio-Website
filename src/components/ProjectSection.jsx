@@ -1,10 +1,6 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
-import spends from "../assets/spends.mp4";
-import weskill from "../assets/weskill.mp4";
-import agrosarthi from "../assets/agrosathi.mp4";
-import nextstep from "../assets/nextstep.mp4";
-import mapty from "../assets/mapty.mp4";
+
 
 import spendImg from "../assets/spends.jpeg";
 import weskillImg from "../assets/weskilll.jpeg";
@@ -18,7 +14,7 @@ const projects = [
     title: "Spend Smart",
     description:
       "Spend Smart is an intelligent expense manager that simplifies finance tracking with OCR-based bill scanning and AI-powered category prediction. It supports friend-based expense splitting, monthly budgets, and mobile-first design.",
-    video: spends,
+    video: "/videos/spends.mp4",
     image: spendImg,
     tech: ["React", "Node.js", "MongoDB", "OCR", "AI"],
     link: "https://spend-smart-gamma.vercel.app/",
@@ -28,7 +24,7 @@ const projects = [
     title: "WeSkill",
     description:
       "WeSkill is an AI-driven freelance marketplace where users post gigs, complete tasks, and get ranked by quality, efficiency, and reviews. It ensures equal opportunities for all skill levels.",
-    video: weskill,
+    video: "/videos/weskill.mp4",
     image: weskillImg,
     tech: ["React", "Express", "Tailwind", "AI Model"],
     link: "https://we-skill-lake.vercel.app/",
@@ -38,7 +34,7 @@ const projects = [
     title: "AgroSarthi",
     description:
       "AgroSarthi is a frontend web app for farmers providing real-time mandi prices, schemes, weather updates, and an interactive map using Leaflet.js. It's mobile-friendly and easy to navigate.",
-    video: agrosarthi,
+    video: "/videos/agrosathi.mp4",
     image: agrosarthiImg,
     tech: ["HTML", "CSS", "JavaScript", "Leaflet.js"],
     github: "https://github.com/yourusername/agrosarthi",
@@ -47,7 +43,7 @@ const projects = [
     title: "NextStep",
     description:
       "NextStep is an AI-based career guidance tool that analyzes user answers from a predefined questionnaire and predicts suitable career directions. It provides clear and personalized suggestions.",
-    video: nextstep,
+    video: "/videos/nextstep.mp4",
     image: nextstepImg,
     tech: ["React", "Node.js", "Python", "Machine Learning"],
     github: "https://github.com/yourusername/nextstep",
@@ -56,7 +52,7 @@ const projects = [
     title: "Mapty",
     description:
       "Mapty is a fitness tracker where users can log running or cycling activities by selecting locations on a map. Built with Leaflet.js and pure JavaScript, it's a lightweight frontend app.",
-    video: mapty,
+    video: "/videos/mapty.mp4",
     image: maptyImg,
     tech: ["HTML", "CSS", "JavaScript", "Leaflet.js"],
     github: "https://github.com/yourusername/mapty",
@@ -106,13 +102,13 @@ export default function ProjectsSection() {
                   onMouseLeave={() => videoRef.current?.pause()}
                 >
                   <video
-                    ref={videoRef}
-                    src={project.video}
-                    className="w-full h-full object-fit"
-                    muted
-                    loop
-                    playsInline
-                  />
+                       ref={videoRef}
+                       src={project.video}
+                       className="w-full h-full object-cover"
+                        muted
+                        loop
+                        playsInline/>
+
                 </div>
 
                 {/* Content Section */}

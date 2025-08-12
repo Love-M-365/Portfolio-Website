@@ -1,7 +1,7 @@
 import React from "react";
 import { Sparkles, Code, Trophy, Brain, Target } from "lucide-react";
 import { motion } from "framer-motion";
-import bgVideo from "../assets/mystory.mp4"; 
+
 
 const timeline = [
   {
@@ -50,7 +50,7 @@ const MyStory = () => {
       {/* Background Video */}
       <video
         className="absolute inset-0 w-full h-full object-cover opacity-30 z-0"
-        src={bgVideo}
+        src="/videos/mystory.mp4"
         autoPlay
         loop
         muted
