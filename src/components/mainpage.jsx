@@ -129,11 +129,11 @@ export default function Home() {
     transition={{ duration: 1 }}
     
   >
-    <div style={{fontFamily:"Orbitron"}}>
+    <div style={{fontFamily:"Bebas Neue"}}>
 
        <SplitText
-  text="Hello,"
-  className="text-7xl  text-center"
+  text="Hello"
+  className="text-8xl  text-center"
   delay={100}
   duration={0.6}
   ease="power3.out"
@@ -147,9 +147,9 @@ export default function Home() {
 />
     </div>
    
-    <h1 className="text-2xl sm:text-3xl md:text-4xl text-[#85c1e9] font-bold">I AM</h1>
+    <h2 className="text-[1.5rem]  text-[#85c1e9] font-bold">I AM</h2>
     <Name />
-    <p className="text-base sm:text-lg mt-5 text-[whitesmoke] leading-relaxed max-w-xl mx-auto md:mx-0">
+    <p className="text-base sm:text-lg  text-[whitesmoke] leading-relaxed max-w-xl  mx-auto md:mx-0" >
       A Full Stack Developer who enjoys building clean, user-friendly, and meaningful digital experiences. From crafting responsive interfaces to exploring smart backend systems, I love turning ideas into real-world solutions. Driven by curiosity and creativity, I strive to write code that not only works — but makes an impact.
     </p>
   </motion.div>
