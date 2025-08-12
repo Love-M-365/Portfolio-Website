@@ -37,7 +37,7 @@ const projects = [
     video: "/videos/agrosathi.mp4",
     image: agrosarthiImg,
     tech: ["HTML", "CSS", "JavaScript", "Leaflet.js"],
-    github: "https://github.com/yourusername/agrosarthi",
+    github: "https://github.com/Love-M-365/Agrosarthi",
   },
   {
     title: "NextStep",
@@ -46,7 +46,7 @@ const projects = [
     video: "/videos/nextstep.mp4",
     image: nextstepImg,
     tech: ["React", "Node.js", "Python", "Machine Learning"],
-    github: "https://github.com/yourusername/nextstep",
+    github: "https://github.com/Love-M-365/NextStep",
   },
   {
     title: "Mapty",
@@ -55,7 +55,7 @@ const projects = [
     video: "/videos/mapty.mp4",
     image: maptyImg,
     tech: ["HTML", "CSS", "JavaScript", "Leaflet.js"],
-    github: "https://github.com/yourusername/mapty",
+    github: "https://github.com/Love-M-365/mapty",
   },
 ];
 
@@ -104,7 +104,7 @@ export default function ProjectsSection() {
                   <video
                        ref={videoRef}
                        src={project.video}
-                       className="w-full h-full object-cover"
+                       className="w-full h-full object-fit"
                         muted
                         loop
                         playsInline/>
