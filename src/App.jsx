@@ -7,7 +7,7 @@ import { ArrowDown } from "lucide-react";
 import ProjectsSection from './components/ProjectSection'
 import ResumePage from './components/Resume'
 import { FaStar } from "react-icons/fa";
-import Contact from './components/CONTACT.JSX'
+import Contact from './components/Contact'
 import GitHubSection from './components/GithubSection'
 
 import MyStory from './components/MyStory'
