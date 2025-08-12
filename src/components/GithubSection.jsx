@@ -7,7 +7,7 @@ const pinnedRepos = [
     name: "Spend Smart",
     description:
       "A smart expense tracking app with AI-powered bill reading and expense split system.",
-    url: "https://github.com/Love-M-365/spend-smart",
+    url: "https://github.com/Love-M-365/spendsmart",
   },
   {
     name: "WeSkill",

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Name from './Name';
-import me from '../assets/finalpic.jpeg';
-import TextPressure from './Hello';
+import me from '../assets/lovely.jpeg';
+import SplitText from './Hello';
 import CurvedLoop from "./CurvedLoop";
 
 import { Menu, X } from "lucide-react";
@@ -14,7 +14,7 @@ export default function Home() {
     { label: "Skills", link: "#skills" },
     { label: "Projects", link: "#projects" },
      { label: "MyStory", link: "#ms" },
-    { label: "Experience", link: "#exp" },
+    { label: "Certificates", link: "#certification" },
     { label: "Resume", link: "#Resume" },
     { label: "Connect", link: "#connect" },
   ];
@@ -30,7 +30,9 @@ export default function Home() {
   
   const [menuOpen, setMenuOpen] = useState(false);
 
- 
+ const handleAnimationComplete = () => {
+  console.log('All letters have animated!');
+};
   return (
     <div className="min-h-screen  font-sans text-white overflow-hidden bg-black">
       
@@ -117,7 +119,7 @@ export default function Home() {
       {/* Main Section */}
     <section
   id="home"
-  className="pt-28 px-4 sm:px-6 md:px-20 min-h-[calc(100vh-80px)] flex flex-col-reverse md:flex-row items-center justify-between gap-10 py-10 relative z-10"
+  className=" px-4 sm:px-6 md:px-20 min-h-[calc(100vh-80px)] flex flex-col-reverse md:flex-row items-center justify-between gap-10 py-10 relative z-10"
 >
   {/* Left: Text Section */}
   <motion.div
@@ -125,24 +127,26 @@ export default function Home() {
     initial={{ x: -100, opacity: 0 }}
     animate={{ x: 0, opacity: 1 }}
     transition={{ duration: 1 }}
+    
   >
-    <div className="w-full flex justify-center md:justify-center">
-      <div className="scale-[0.4] sm:scale-50 md:scale-75 lg:scale-90 origin-top transition-transform duration-500">
-        <TextPressure
-          text="Hello!"
-          flex={false}
-          alpha={false}
-          stroke={false}
-          width={true}
-          weight={true}
-          italic={true}
-          textColor="#ffffff"
-          strokeColor="#ff0000"
-          minFontSize={250}
-        />
-      </div>
-    </div>
+    <div style={{fontFamily:"Orbitron"}}>
 
+       <SplitText
+  text="Hello,"
+  className="text-7xl  text-center"
+  delay={100}
+  duration={0.6}
+  ease="power3.out"
+  splitType="chars"
+  from={{ opacity: 0, y: 40 }}
+  to={{ opacity: 1, y: 0 }}
+  threshold={0.1}
+  rootMargin="-100px"
+  textAlign="center"
+  onLetterAnimationComplete={handleAnimationComplete}
+/>
+    </div>
+   
     <h1 className="text-2xl sm:text-3xl md:text-4xl text-[#85c1e9] font-bold">I AM</h1>
     <Name />
     <p className="text-base sm:text-lg mt-5 text-[whitesmoke] leading-relaxed max-w-xl mx-auto md:mx-0">

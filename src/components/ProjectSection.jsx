@@ -21,8 +21,8 @@ const projects = [
     video: spends,
     image: spendImg,
     tech: ["React", "Node.js", "MongoDB", "OCR", "AI"],
-    link: "https://your-spend-smart-link.com",
-    github: "https://github.com/yourusername/spendsmart",
+    link: "https://spend-smart-gamma.vercel.app/",
+    github: "https://github.com/Love-M-365/spendsmart",
   },
   {
     title: "WeSkill",
@@ -31,8 +31,8 @@ const projects = [
     video: weskill,
     image: weskillImg,
     tech: ["React", "Express", "Tailwind", "AI Model"],
-    link: "https://your-weskill-link.com",
-    github: "https://github.com/yourusername/weskill",
+    link: "https://we-skill-lake.vercel.app/",
+    github: "https://github.com/Love-M-365/weskill",
   },
   {
     title: "AgroSarthi",
@@ -41,7 +41,6 @@ const projects = [
     video: agrosarthi,
     image: agrosarthiImg,
     tech: ["HTML", "CSS", "JavaScript", "Leaflet.js"],
-    link: "https://your-agrosarthi-link.com",
     github: "https://github.com/yourusername/agrosarthi",
   },
   {
@@ -51,7 +50,6 @@ const projects = [
     video: nextstep,
     image: nextstepImg,
     tech: ["React", "Node.js", "Python", "Machine Learning"],
-    link: "https://your-nextstep-link.com",
     github: "https://github.com/yourusername/nextstep",
   },
   {
@@ -61,7 +59,6 @@ const projects = [
     video: mapty,
     image: maptyImg,
     tech: ["HTML", "CSS", "JavaScript", "Leaflet.js"],
-    link: "https://your-mapty-link.com",
     github: "https://github.com/yourusername/mapty",
   },
 ];
@@ -135,23 +132,27 @@ export default function ProjectsSection() {
                     ))}
                   </div>
                   <div className="flex gap-4">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-300 hover:underline"
-                    >
-                      View Live →
-                    </a>
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-green-300 hover:underline"
-                    >
-                      GitHub →
-                    </a>
-                  </div>
+  {project.link && (
+    <a
+      href={project.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-300 hover:underline"
+    >
+      View Live →
+    </a>
+  )}
+  {project.github && (
+    <a
+      href={project.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-green-300 hover:underline"
+    >
+      GitHub →
+    </a>
+  )}
+</div>
                 </div>
               </div>
             </motion.div>

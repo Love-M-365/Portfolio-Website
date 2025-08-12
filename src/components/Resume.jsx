@@ -18,15 +18,6 @@ export default function ResumePage() {
         />
 
         <div className="flex gap-4">
-          <a
-            href={resumePDF}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-full transition duration-300 hover:scale-105"
-          >
-            <Eye size={20} />
-            View Resume
-          </a>
 
           <a
             href={resumePDF}

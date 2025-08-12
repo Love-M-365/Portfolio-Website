@@ -1,7 +1,11 @@
 import React from "react";
 import freecodecamp from "../assets/freeCodeCamp.png";
 import postman from "../assets/postmann.png";
-import js from "../assets/jscertificate.png"
+import js from "../assets/jscertificate.png";
+import iit from "../assets/iitcertify.png";
+import google from "../assets/googlecertify.png"
+import prompt from "../assets/prompt.png"
+
 
 const certificates = [
   {
@@ -21,6 +25,24 @@ const certificates = [
     image: js,
     issuer: "Udemy",
     viewLink: js,
+  },
+  {
+    title: "Prompt Design In Vertex AI",
+    image: prompt,
+    issuer: "Google Cloud",
+    viewLink: prompt,
+  },
+  {
+    title: "Workshop On 5G PH layer at IIT",
+    image: iit,
+    issuer: "IIT",
+    viewLink: iit,
+  },
+   {
+    title: "Sollution Challenge certificate by Google",
+    image: google,
+    issuer: "Hack2Skill- Google",
+    viewLink: google,
   },
 ];
 

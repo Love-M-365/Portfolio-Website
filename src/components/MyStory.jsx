@@ -1,6 +1,8 @@
 import React from "react";
 import { Sparkles, Code, Trophy, Brain, Target } from "lucide-react";
-import bgVideo from "../assets/mystory.mp4"; // Update path if needed
+import { motion } from "framer-motion";
+import bgVideo from "../assets/mystory.mp4"; 
+
 const timeline = [
   {
     year: "2021–2022",
@@ -57,7 +59,7 @@ const MyStory = () => {
 
       {/* Main Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6">
-        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-10 sm:mb-16">
+        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-10 sm:mb-16" style={{fontFamily:"orbitron"}}>
           Love Story
         </h2>
 
@@ -71,8 +73,12 @@ const MyStory = () => {
               const isLeft = index % 2 === 0;
 
               return (
-                <div
+                <motion.div
                   key={index}
+                  initial={{ opacity: 0, x: isLeft ? -100 : 100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  viewport={{ once: true, amount: 0.5 }}
                   className={`relative flex flex-col items-center md:flex-row ${
                     isLeft ? "md:flex-row-reverse" : ""
                   } group`}
@@ -101,7 +107,7 @@ const MyStory = () => {
 
                   {/* Spacer */}
                   <div className="hidden md:block md:w-1/2" />
-                </div>
+                </motion.div>
               );
             })}
           </div>

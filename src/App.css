@@ -161,3 +161,9 @@ a.relative.group::after {
 a.relative.group:hover::after {
   width: 100%;
 }
+.bungee-regular {
+  font-family: "Bungee";
+  font-weight: 400;
+  font-style: normal;
+}
+

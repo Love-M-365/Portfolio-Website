@@ -8,7 +8,7 @@ export default function Name() {
     <h1 className="text-3xl font-bold" style={{fontSize:"2.9rem"}}>
       <Typewriter
         options={{
-          strings: ["Love Maggo","A Web Developer"],
+          strings: ["Love Maggo","A Full Stack Developer"],
           autoStart: true,
           loop: true,
           delay: 75,
